@@ -70,6 +70,13 @@ The average number of people that worked for the company during the year:
     M   50 to 250 employees (medium)
     L   more than 250 employees (large)
     
+# SQL Analysis Details 
+
+### Salary Distribution among different job titles and experience levels
+-- Shows the average salary for each group
+
+[Salary Distribution among different job titles and experience levels.csv](https://github.com/jerushaotieno/Tech_Salaries_SQL_Analysis_2020-2023/files/10714340/Salary.Distribution.among.different.job.titles.and.experience.levels.csv)
+
 
  
  
