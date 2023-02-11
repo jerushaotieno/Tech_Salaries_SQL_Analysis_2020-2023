@@ -79,10 +79,15 @@ The average number of people that worked for the company during the year:
 
 ### Relationship between remote work and salary
 -- Shows the average salary for each unique value of remote_ratio
+
 -- Remote ratio of 0 gives the highest average salaries while that of 50 gives the least average salaries
+
 -- Remote ratio of 0 has an average salary of USD 139,537.677364865
+
 -- Remote ratio of 100 has an average salary of USD 134,422.291731669
+
 -- Remote ratio of 50 has an average salary of USD 78,025.9069767442
+
 
 [Relationship between remote work and salary.csv](https://github.com/jerushaotieno/Tech_Salaries_SQL_Analysis_2020-2023/files/10714346/Relationship.between.remote.work.and.salary.csv)
 
