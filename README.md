@@ -1,10 +1,10 @@
-### Tech_Salaries_SQL_Analysis_2020-2023
+# Tech_Salaries_SQL_Analysis_2020-2023
 
 Tech_Salaries_SQL_Analysis_2020-2023 is a SQL analysis of salary data between 2020 and 2023 for techies working for US-based companies. The goal is to understand the distribution of salaries across different variables such as job title, experience level, remote work, company size, employment type, location, currency, and time. By conducting these analyses, a business could gain insights into various factors that may impact salary and make data-driven decisions to improve compensation policies or make other strategic decisions. Additionally, the analysis can be used to identify any potential disparities in salary and to make recommendations for addressing any inequalities.
 
 For example, the results of the "Experience Level vs Salary" analysis indicates that there is a correlation between experience level and salary, and the business could use this information to make decisions about how to structure compensation for employees at different experience levels. By grouping the data by employment type and calculating the average salary for each group, the business can compare the salary of different employment types. Similarly, the "Salary Trends over time" analysis provides insight into how salaries have changed over time and could inform decision-making about compensation policies and strategies.
 
-### Dataset Details 
+# Dataset Details 
 
 This database was sourced from https://ai-jobs.net/salaries/download/
 
@@ -12,11 +12,11 @@ It contains 11 columns and 2,638 rows of data.
 
 The dataset basically contains a single table with all salary information structured as follows:
 
-# work_year   
+### work_year   
 
 The year the salary was paid.
 
-# experience_level    
+### experience_level    
 
 The experience level in the job during the year with the following possible values:
     EN    Entry-level / Junior
@@ -24,7 +24,7 @@ The experience level in the job during the year with the following possible valu
     SE    Senior-level / Expert
     EX    Executive-level / Director
 
-# employment_type
+### employment_type
  
  The type of employement for the role:
     PT    Part-time
@@ -32,38 +32,38 @@ The experience level in the job during the year with the following possible valu
     CT    Contract
     FL    Freelance
 
-# job_title
+### job_title
 
 The role worked in during the year.
 
-# salary
+### salary
 
 The total gross salary amount paid.
 
-# salary_currency
+### salary_currency
 
 The currency of the salary paid as an ISO 4217 currency code.
 
-# salary_in_usd
+### salary_in_usd
 
 The salary in USD (FX rate divided by avg. USD rate of respective year via data from BIS).
 
-# employee_residence
+### employee_residence
 
 Employee's primary country of residence in during the work year as an ISO 3166 country code.
 
-# remote_ratio
+### remote_ratio
 
 The overall amount of work done remotely, possible values are as follows:
     0     No remote work (less than 20%)
     50    Partially remote
     100   Fully remote (more than 80%)
 
-# company_location
+### company_location
 
 The country of the employer's main office or contracting branch as an ISO 3166 country code.
 
-# company_size
+### company_size
 
 The average number of people that worked for the company during the year:
     S   less than 50 employees (small)
