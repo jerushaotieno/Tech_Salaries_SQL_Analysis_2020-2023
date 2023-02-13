@@ -3,47 +3,54 @@ SELECT COUNT(*) FROM SYS.TABLES
 
 --Brief Dataset Overview: A single table with tech salary information for US-based companies between 2020 and 2023
 
---Total Rows/Records in the Table is 2,638
+## Code to find Total Rows/Records in the Table
 
 SELECT * FROM TechSalaries
 
 
---0 rows with Work Year missing
+## Code to find Work Years missing
+
 SELECT * FROM TechSalaries
 WHERE work_year is null
 
 
---0 rows with Work Year missing
+## Code to find any Work Years less than 2020 and greater than 2023: Data analyzed is between 2020 and 2023
+
 SELECT * FROM TechSalaries
 WHERE work_year < 2020 and work_year > 2023
 
 
---0 rows with Experience Level missing
+## Code to find any Experience Level missing
+
 SELECT * FROM TechSalaries
 WHERE experience_level is null
 
 
---0 rows with Employment Type missing
+## Code to find any Employment Type missing
+
 SELECT * FROM TechSalaries
 WHERE employment_type is null
 
 
---0 rows with Job Title missing
+## Code to find if any Job Title missing
+
 SELECT * FROM TechSalaries
 WHERE job_title is null
 
 
---0 rows with Salary missing
+## Code to find any salary data missing
+
 SELECT * FROM TechSalaries
 WHERE salary is null
 
 
---0 rows with Job Title missing
+## Code to find any salary currency data missing
+
 SELECT * FROM TechSalaries
 WHERE salary_currency is null
 
 
--- Salary Distribution among different job titles and experience levels
+## Salary Distribution among different job titles and experience levels
 -- Shows the average salary for each group
 
 SELECT job_title, experience_level, AVG(salary_in_usd) AS avg_salary
@@ -51,7 +58,7 @@ FROM TechSalaries
 GROUP BY job_title, experience_level
 
 
--- Relationship between remote work and salary
+## Relationship between remote work and salary
 -- Shows the average salary for each unique value of remote_ratio
 -- Remote ratio of 0 gives the highest average salaries while that of 50 gives the least average salaries
 -- Remote ratio of 0 has an average salary of USD 139,537.677364865
@@ -63,7 +70,7 @@ FROM TechSalaries
 GROUP BY remote_ratio
 
 
--- Relationship between company size and salary
+## Relationship between company size and salary
 -- Shows the average salary for each unique value of company_size
 -- The average salaries for those is medium-sized companies is the highest while the least average salaries are for those in small-sized companies
 -- Average salary for techies in small-sized companies is USD 77,665.8106060606
@@ -75,7 +82,7 @@ FROM TechSalaries
 GROUP BY company_size
 
 
--- Salary by employment type
+## Salary by employment type
 -- Shows the average salary for each unique value of employment_type
 -- Techies on contract earn the most followed by those on full-time employment. Part-time techies earn the least.
 -- Average salary for techies on contract is USD 134,871.125
@@ -88,7 +95,7 @@ FROM TechSalaries
 GROUP BY employment_type
 
 
--- Salary by location
+## Salary by location
 -- Shows the average salary for each unique value of employee_residence and company_location
 
 WITH employee_location AS (
@@ -107,7 +114,7 @@ SELECT 'company_location' AS location_type, company_location, avg_salary
 FROM company_location
 
 
--- Experience level vs salary
+## Experience level vs salary
 -- Shows the average salary for each unique value of experience_level
 -- Executive-level techies earn the most followed by senior-level ones. The least earners are entry-level techies.
 -- The average salary for Mid-level / Intermediate techies is USD 99,883.6738056013
@@ -120,7 +127,7 @@ FROM TechSalaries
 GROUP BY experience_level
 
 
--- Salary trends over time
+## Salary trends over time
 -- Shows the average salary for each unique value of work_year
 -- Salaries for techies have been increasing since 2020. They are earning the highest in 2023. 
 -- The biggest leap in salary increment took place in 2022, up from 2021.
